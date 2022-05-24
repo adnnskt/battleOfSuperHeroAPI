@@ -34,6 +34,21 @@
   background-color: #82cc0b;
 }
 
+.main-button{
+    --c: rgb(75, 54, 0);
+    font-size: 12px;
+    border-radius: 0.5em;
+    border-width: 0.1em;
+    height: 3em;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-align: center;
+    background-color: rgb(36, 35, 35);
+    color: rgb(8, 105, 189);
+    
+}
+
 .App {
   text-align: center;
 }
