@@ -1,9 +1,23 @@
+
+.body{
+  background-image: url('./src/bg-img.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.header{
+  display: flex;
+  justify-content: flex-end;
+  background: none;
+}
+
 .container {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color:  #61dafb;
   min-height: 100vh;
+  background-color: #282c3411;
+
 }
 
 .main {

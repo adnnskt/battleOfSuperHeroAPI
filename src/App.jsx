@@ -3,14 +3,16 @@ import logo from './logo.svg'
 import './App.css'
 import api from './Middleware/apiData'
 import Cards from './Components/Cards'
+import Header from './Components/Header'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return ( 
-
+    <>
+      <Header />
       <Cards />
-
+    </>
    )
 }
 

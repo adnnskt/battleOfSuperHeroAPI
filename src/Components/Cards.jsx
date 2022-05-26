@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
 import '../App.css'
 import api from '../Middleware/apiData'
-
 export default props => {
     //let hero = {}  
 
