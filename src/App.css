@@ -9,15 +9,18 @@
   display: flex;
   justify-content: flex-end;
   background: none;
+  margin-right: 30%;
+}
+
+.text{
+  color: gray;
 }
 
 .container {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  background-color: #282c3411;
-
+  min-height: 100%;
 }
 
 .main {

@@ -7,7 +7,7 @@ export default props => {
     return(
         <div className='header'>
             <div className='title'>
-                <h2>Battle of SuperHero API</h2>
+                <h2 className= 'text'>Battle of SuperHero API</h2>
             </div>
         </div>
     )
