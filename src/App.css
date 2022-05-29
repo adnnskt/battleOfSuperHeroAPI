@@ -14,6 +14,7 @@
 
 .text{
   color: gray;
+  font-family: 'Comic Neue', cursive;
 }
 
 .container {
@@ -38,10 +39,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #282c34;
 }
 
-
+.img-hero {
+  width: 10;
+  height: 20;
+}
 .secound-card {
   height: 50%;
   width: 30rem;
