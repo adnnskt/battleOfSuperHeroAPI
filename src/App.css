@@ -37,14 +37,19 @@
   height: 50%;
   width: 30rem;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+
 }
 
-.img-hero {
-  width: 10;
-  height: 20;
+.center-img {
+  display: flex;
+  justify-content: center;  
 }
+
+.name-hero {
+  padding-left: 10%;
+}
+
 .secound-card {
   height: 50%;
   width: 30rem;
