@@ -9,10 +9,17 @@ export default props => {
  
 
  function changeData(){
+    let heroData = {}
     api.get('1')
     .then(function(response){
-        setHero(response.data)
+        
+        heroData.name = response.data.name
+        heroData.fullName = response.data.biography.aliases
+        heroData.publisher = response.data.biography.publisher
+        heroData.firstAppearance = response.data.biography['first-appearance']
+        //console.log(response.data.biography['first-appearance'])
         setHeroImg(<img src={response.data.image.url} width= '150' height= '160'/>)
+        setHero(heroData)        
     })
  }
  
@@ -21,7 +28,14 @@ export default props => {
             <div className='main'>
                 <div className='first-card'>
                     <div className='center-img'>{heroImg}</div>
-                    <h2 className= 'name-hero'>{hero.name}</h2>
+                    <h1 className= 'name-hero'>{hero.name}</h1>
+                    <div>
+                        
+                        <h4 className= 'sec-text'>{hero.fullName}</h4>
+                        <h4 className= 'sec-text'>{hero.publisher}</h4>
+                        <h4 className= 'sec-text'>{hero.firstAppearance}</h4>
+                    </div>
+                    
                 </div>
                 <div><button onClick={changeData} className='main-button'>Loading Heros</button></div>
                 <div className='secound-card'>
