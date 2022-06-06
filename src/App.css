@@ -40,6 +40,7 @@
   flex-direction: column;
   background-image: url('./src/cardBG.png');
   background-size: 100%;
+  box-shadow: 4px 4px 6px #282c34;
 }
 
 .center-img {
@@ -49,7 +50,7 @@
 }
 
 .name-hero {
-  padding-left: 25%;
+  padding-left: 5%;
   color: rgb(173, 6, 6);
   text-shadow: 1px 1px 3px white;
   margin: 00;
