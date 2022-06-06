@@ -16,9 +16,9 @@ export default props => {
         heroData.name = response.data.name
         heroData.fullName = response.data.biography.aliases
         heroData.publisher = response.data.biography.publisher
-        heroData.firstAppearance = response.data.biography['first-appearance']
+        heroData.firstAppearance = `First appearance at ${response.data.biography['first-appearance']}`
         //console.log(response.data.biography['first-appearance'])
-        setHeroImg(<img src={response.data.image.url} width= '150' height= '160'/>)
+        setHeroImg(<img src={response.data.image.url} width= '110' height= '120'/>)
         setHero(heroData)        
     })
  }
