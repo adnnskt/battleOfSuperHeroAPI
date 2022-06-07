@@ -38,7 +38,7 @@
   width: 250px;
   display: flex;
   flex-direction: column;
-  background-image: url('./src/cardBG.png');
+  background-image: url('./src/cardBG-w.png');
   background-size: 100%;
   box-shadow: 4px 4px 6px #282c34;
 }
