@@ -76,7 +76,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #82cc0b;
+  background-image: url('./src/cardBG2.png');
+  background-size: 100%;
+  box-shadow: 4px 4px 6px #282c34;
 }
 
 .main-button{

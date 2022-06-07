@@ -17,8 +17,9 @@ export default props => {
         heroData.fullName = response.data.biography.aliases
         heroData.publisher = response.data.biography.publisher
         heroData.firstAppearance = `First appearance at ${response.data.biography['first-appearance']}`
-        console.log(response.data)
-        setHeroImg(<img src={response.data.image.url} className= 'img' width= '160' height= '120'/>)
+        heroData.connection = `Connection with ${response.data.connections['group-affiliation']}`
+        console.log(response.datas)
+        setHeroImg(<img src={response.data.image.url} className= 'img' width= '150' height= '120'/>)
         setHero(heroData)        
     })
  }
@@ -36,6 +37,7 @@ export default props => {
                         <h4 className= 'sec-text'>{hero.fullName}</h4>
                         <h4 className= 'sec-text'>{hero.publisher}</h4>
                         <h4 className= 'sec-text'>{hero.firstAppearance}</h4>
+                        <h4 className= 'sec-text'>{hero.connection}</h4>
                     </div>
                     
                 </div>
