@@ -10,24 +10,26 @@ export default props => {
 
  function changeData(){
     let heroData = {}
-    api.get('1')
+    api.get('3')
     .then(function(response){
         
         heroData.name = response.data.name
         heroData.fullName = response.data.biography.aliases
         heroData.publisher = response.data.biography.publisher
         heroData.firstAppearance = `First appearance at ${response.data.biography['first-appearance']}`
-        //console.log(response.data.biography['first-appearance'])
-        setHeroImg(<img src={response.data.image.url} width= '110' height= '120'/>)
+        console.log(response.data)
+        setHeroImg(<img src={response.data.image.url} className= 'img' width= '160' height= '120'/>)
         setHero(heroData)        
     })
  }
  
     return(
+        <>
+        
         <div className='container'>
             <div className='main'>
                 <div className='first-card'>
-                    <div className='center-img'>{heroImg}</div>
+                <div className='center-img'>{heroImg}</div>                
                     <h1 className= 'name-hero'>{hero.name}</h1>
                     <div>
                         
@@ -44,5 +46,6 @@ export default props => {
             </div>
 
         </div>
+        </>
     )
 }
