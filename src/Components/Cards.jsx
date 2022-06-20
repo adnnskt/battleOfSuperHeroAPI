@@ -22,6 +22,7 @@ export default props => {
     setHeroImg(<img src={data[0].images.lg} className= 'img' width= '160' height= '170'/>)
     setHero(heroData)        
     
+    changeDataSecCard()
     /*
     api.get('3')
     .then(function(response){
@@ -40,13 +41,13 @@ export default props => {
 
 function changeDataSecCard(){
     let heroDataSecCard = {}
-    heroDataSecCard.name = data[0].name
-    heroDataSecCard.fullName = data[0].biography.aliases
-    heroDataSecCard.publisher = data[0].biography.publisher
-    heroDataSecCard.firstAppearance = `First appearance at ${data[0].biography.firstAppearance}`
-    heroDataSecCard.connection = `Connection with ${data[0].connections.groupAffiliation}`
-    setHeroImgSecCard(<img src={data[0].images.lg} className= 'img' width= '160' height= '170'/>)
-    setHeroSecCard(heroData)        
+    heroDataSecCard.name = data[1].name
+    heroDataSecCard.fullName = data[1].biography.aliases
+    heroDataSecCard.publisher = data[1].biography.publisher
+    heroDataSecCard.firstAppearance = `First appearance at ${data[1].biography.firstAppearance}`
+    heroDataSecCard.connection = `Connection with ${data[1].connections.groupAffiliation}`
+    setHeroImgSecCard(<img src={data[1].images.lg} className= 'img' width= '160' height= '170'/>)
+    setHeroSecCard(heroDataSecCard)        
     
 }
 
@@ -70,8 +71,17 @@ function changeDataSecCard(){
                     </div>
                 </div>
                 <div><button onClick={changeData} className='main-button'>Loading Heros</button></div>
-                <div className='secound-card'>
-                    <h2>Card 2</h2>
+                <div className= 'first-container'>
+                    <div className='center-img'>{heroImgSecCard}</div>
+                        <div className='secound-card'>
+                        <h1 className= 'name-hero'>{heroSecCard.name}</h1>
+                            <div>                     
+                                <h4 className= 'sec-text'>{heroSecCard.fullName}</h4>
+                                <h4 className= 'sec-text'>{heroSecCard.publisher}</h4>
+                                <h4 className= 'sec-text'>{heroSecCard.firstAppearance}</h4>
+                                <h4 className= 'sec-text'>{heroSecCard.connection}</h4>
+                            </div>
+                    </div>
                 </div>
             </div>
 
