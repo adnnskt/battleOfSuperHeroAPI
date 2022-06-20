@@ -14,8 +14,8 @@ export default props => {
     heroData.name = data[0].name
     heroData.fullName = data[0].biography.aliases
     heroData.publisher = data[0].biography.publisher
-    heroData.firstAppearance = `First appearance at ${data[0].biography['first-appearance']}`
-    heroData.connection = `Connection with ${data[0].connections['group-affiliation']}`
+    heroData.firstAppearance = `First appearance at ${data[0].biography.firstAppearance}`
+    heroData.connection = `Connection with ${data[0].connections.groupAffiliation}`
     setHeroImg(<img src={data[0].images.lg} className= 'img' width= '160' height= '170'/>)
     setHero(heroData)        
     
