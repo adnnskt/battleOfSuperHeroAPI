@@ -16,7 +16,7 @@ export default props => {
     heroData.publisher = data[0].biography.publisher
     heroData.firstAppearance = `First appearance at ${data[0].biography['first-appearance']}`
     heroData.connection = `Connection with ${data[0].connections['group-affiliation']}`
-    setHeroImg(<img src={data[0].images.lg} className= 'img' width= '130' height= '120'/>)
+    setHeroImg(<img src={data[0].images.lg} className= 'img' width= '160' height= '170'/>)
     setHero(heroData)        
     
     /*
@@ -39,16 +39,18 @@ export default props => {
     <>
     <div className='container'>
             <div className='main'>
-                <div className='first-card'>
-                <div className='center-img'>{heroImg}</div>                
-                    <h1 className= 'name-hero'>{hero.name}</h1>
-                    <div>                     
-                        <h4 className= 'sec-text'>{hero.fullName}</h4>
-                        <h4 className= 'sec-text'>{hero.publisher}</h4>
-                        <h4 className= 'sec-text'>{hero.firstAppearance}</h4>
-                        <h4 className= 'sec-text'>{hero.connection}</h4>
+                <div className= 'first-container'>
+                <div className='center-img'>{heroImg}</div>
+                    <div className='first-card'>
+                                    
+                        <h1 className= 'name-hero'>{hero.name}</h1>
+                        <div>                     
+                            <h4 className= 'sec-text'>{hero.fullName}</h4>
+                            <h4 className= 'sec-text'>{hero.publisher}</h4>
+                            <h4 className= 'sec-text'>{hero.firstAppearance}</h4>
+                            <h4 className= 'sec-text'>{hero.connection}</h4>
+                        </div>
                     </div>
-                    
                 </div>
                 <div><button onClick={changeData} className='main-button'>Loading Heros</button></div>
                 <div className='secound-card'>
