@@ -8,6 +8,9 @@ export default props => {
  const [hero, setHero] = useState([])
  const [heroImg, setHeroImg] = useState([])
  
+ const [heroSecCard, setHeroSecCard] = useState([])
+ const [heroImgSecCard, setHeroImgSecCard] = useState([])
+ 
 
  function changeData(){
     let heroData = {}
@@ -34,6 +37,20 @@ export default props => {
     })
     */
 }
+
+function changeDataSecCard(){
+    let heroDataSecCard = {}
+    heroDataSecCard.name = data[0].name
+    heroDataSecCard.fullName = data[0].biography.aliases
+    heroDataSecCard.publisher = data[0].biography.publisher
+    heroDataSecCard.firstAppearance = `First appearance at ${data[0].biography.firstAppearance}`
+    heroDataSecCard.connection = `Connection with ${data[0].connections.groupAffiliation}`
+    setHeroImgSecCard(<img src={data[0].images.lg} className= 'img' width= '160' height= '170'/>)
+    setHeroSecCard(heroData)        
+    
+}
+
+
     return(
         
     <>
