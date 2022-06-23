@@ -71,6 +71,15 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+.name-hero-2{
+  padding-left: 5%;
+  padding-top: 55%;
+  color: rgb(173, 6, 6);
+  text-shadow: 1px 1px 3px white;
+  margin: 00;
+  font-family: 'Montserrat', sans-serif;
+}
+
 .sec-text {
   color: rgb(202, 200, 200);
   margin: 0 0;
@@ -79,12 +88,20 @@
   font-size:x-small;
 }
 
+.sec-text-2 {
+  color: rgb(44, 44, 44);
+  margin: 0 0 0 0;
+  padding-left: 2%; 
+  font-family: 'Comic Neue', cursive;
+  font-size:x-small;
+}
+
+
 .secound-card {
   height: 400px;
   width: 250px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
   background-image: url('./src/cardBG2.png');
   background-size: 100%;
   box-shadow: 4px 4px 6px #282c34;

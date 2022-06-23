@@ -15,7 +15,7 @@ export default props => {
  function changeData(){
     let heroData = {}
     heroData.name = data[0].name
-    heroData.fullName = data[0].biography.aliases
+    heroData.fullName = data[0].biography.fullName
     heroData.publisher = data[0].biography.publisher
     heroData.firstAppearance = `First appearance at ${data[0].biography.firstAppearance}`
     heroData.connection = `Connection with ${data[0].connections.groupAffiliation}`
@@ -42,7 +42,7 @@ export default props => {
 function changeDataSecCard(){
     let heroDataSecCard = {}
     heroDataSecCard.name = data[1].name
-    heroDataSecCard.fullName = data[1].biography.aliases
+    heroDataSecCard.fullName = data[1].biography.fullName
     heroDataSecCard.publisher = data[1].biography.publisher
     heroDataSecCard.firstAppearance = `First appearance at ${data[1].biography.firstAppearance}`
     heroDataSecCard.connection = `Connection with ${data[1].connections.groupAffiliation}`
@@ -74,12 +74,12 @@ function changeDataSecCard(){
                 <div className= 'first-container'>
                     <div className='center-img'>{heroImgSecCard}</div>
                         <div className='secound-card'>
-                        <h1 className= 'name-hero'>{heroSecCard.name}</h1>
+                        <h1 className='name-hero-2'>{heroSecCard.name}</h1>
                             <div>                     
-                                <h4 className= 'sec-text'>{heroSecCard.fullName}</h4>
-                                <h4 className= 'sec-text'>{heroSecCard.publisher}</h4>
-                                <h4 className= 'sec-text'>{heroSecCard.firstAppearance}</h4>
-                                <h4 className= 'sec-text'>{heroSecCard.connection}</h4>
+                                <h4 className= 'sec-text-2'>{heroSecCard.fullName}</h4>
+                                <h4 className= 'sec-text-2'>{heroSecCard.publisher}</h4>
+                                <h4 className= 'sec-text-2'>{heroSecCard.firstAppearance}</h4>
+                                <h4 className= 'sec-text-2'>{heroSecCard.connection}</h4>
                             </div>
                     </div>
                 </div>
