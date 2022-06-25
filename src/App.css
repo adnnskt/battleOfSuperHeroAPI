@@ -45,7 +45,7 @@
   width: 250px;
   display: flex;
   flex-direction: column;
-  background-image: url('./src/cardBG-w.png');
+  background-image: url('./src/cardBG v2.png');
   background-size: 100%;
   box-shadow: 4px 4px 6px #282c34;
 }
@@ -102,7 +102,7 @@
   width: 250px;
   display: flex;
   flex-direction: column;
-  background-image: url('./src/cardBG2.png');
+  background-image: url('./src/cardBG2 v2.png');
   background-size: 100%;
   box-shadow: 4px 4px 6px #282c34;
 }

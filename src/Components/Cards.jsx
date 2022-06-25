@@ -14,12 +14,15 @@ export default props => {
 
  function changeData(){
     let heroData = {}
-    heroData.name = data[0].name
-    heroData.fullName = data[0].biography.fullName
-    heroData.publisher = data[0].biography.publisher
-    heroData.firstAppearance = `First appearance at ${data[0].biography.firstAppearance}`
-    heroData.connection = `Connection with ${data[0].connections.groupAffiliation}`
-    setHeroImg(<img src={data[0].images.lg} className= 'img' width= '160' height= '170'/>)
+
+    let num = Math.random() * (731 - 0) + 0
+
+    heroData.name = data[Math.round(num)].name
+    heroData.fullName = data[Math.round(num)].biography.fullName
+    heroData.publisher = data[Math.round(num)].biography.publisher
+    heroData.firstAppearance = `First appearance at ${data[Math.round(num)].biography.firstAppearance}`
+    heroData.connection = `Connection with ${data[Math.round(num)].connections.groupAffiliation}`
+    setHeroImg(<img src={data[Math.round(num)].images.lg} className= 'img' width= '160' height= '170'/>)
     setHero(heroData)        
     
     changeDataSecCard()
@@ -41,14 +44,17 @@ export default props => {
 
 function changeDataSecCard(){
     let heroDataSecCard = {}
-    heroDataSecCard.name = data[1].name
-    heroDataSecCard.fullName = data[1].biography.fullName
-    heroDataSecCard.publisher = data[1].biography.publisher
-    heroDataSecCard.firstAppearance = `First appearance at ${data[1].biography.firstAppearance}`
-    heroDataSecCard.connection = `Connection with ${data[1].connections.groupAffiliation}`
-    setHeroImgSecCard(<img src={data[1].images.lg} className= 'img' width= '160' height= '170'/>)
-    setHeroSecCard(heroDataSecCard)        
     
+    let num = Math.random() * (731 - 0) + 0
+    
+    heroDataSecCard.name = data[Math.round(num)].name
+    heroDataSecCard.fullName = data[Math.round(num)].biography.fullName
+    heroDataSecCard.publisher = data[Math.round(num)].biography.publisher
+    heroDataSecCard.firstAppearance = `First appearance at ${data[Math.round(num)].biography.firstAppearance}`
+    heroDataSecCard.connection = `Connection with ${data[Math.round(num)].connections.groupAffiliation}`
+    setHeroImgSecCard(<img src={data[Math.round(num)].images.lg} className= 'img' width= '160' height= '170'/>)
+    setHeroSecCard(heroDataSecCard)       
+
 }
 
 
@@ -59,8 +65,7 @@ function changeDataSecCard(){
             <div className='main'>
                 <div className= 'first-container'>
                 <div className='center-img'>{heroImg}</div>
-                    <div className='first-card'>
-                                    
+                    <div className='first-card'>                                  
                         <h1 className= 'name-hero'>{hero.name}</h1>
                         <div>                     
                             <h4 className= 'sec-text'>{hero.fullName}</h4>
