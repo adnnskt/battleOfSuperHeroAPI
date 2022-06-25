@@ -14,7 +14,6 @@ export default props => {
 
  function changeData(){
     let heroData = {}
-
     let num = Math.random() * (731 - 0) + 0
 
     heroData.name = data[Math.round(num)].name
@@ -44,7 +43,6 @@ export default props => {
 
 function changeDataSecCard(){
     let heroDataSecCard = {}
-    
     let num = Math.random() * (731 - 0) + 0
     
     heroDataSecCard.name = data[Math.round(num)].name
