@@ -16,16 +16,21 @@ export default props => {
     let heroData = {}
     let num = Math.random() * (731 - 0) + 0
 
-    heroData.name = data[Math.round(num)].name
-    heroData.fullName = data[Math.round(num)].biography.fullName
-    heroData.publisher = data[Math.round(num)].biography.publisher
-    heroData.firstAppearance = `First appearance at ${data[Math.round(num)].biography.firstAppearance}`
-    heroData.connection = `Connection with ${data[Math.round(num)].connections.groupAffiliation}`
-    setHeroImg(<img src={data[Math.round(num)].images.lg} className= 'img' width= '160' height= '170'/>)
-    setHero(heroData)        
+    if (data[Math.round(num)] === undefined){
+        changeData()
+    } else {
+        heroData.name = data[Math.round(num)].name
+        heroData.fullName = data[Math.round(num)].biography.fullName
+        heroData.publisher = data[Math.round(num)].biography.publisher
+        heroData.firstAppearance = `First appearance at ${data[Math.round(num)].biography.firstAppearance}`
+        heroData.connection = `Connection with ${data[Math.round(num)].connections.groupAffiliation}`
+        setHeroImg(<img src={data[Math.round(num)].images.lg} className= 'img' width= '160' height= '170'/>)
+        setHero(heroData)        
     
-    changeDataSecCard()
-    /*
+        changeDataSecCard()    
+    }
+
+     /*
     api.get('3')
     .then(function(response){
         
@@ -45,18 +50,20 @@ function changeDataSecCard(){
     let heroDataSecCard = {}
     let num = Math.random() * (731 - 0) + 0
     //683
-    console.log(num)
-    heroDataSecCard.name = data[Math.round(num)].name
-    heroDataSecCard.fullName = data[Math.round(num)].biography.fullName
-    heroDataSecCard.publisher = data[Math.round(num)].biography.publisher
-    heroDataSecCard.firstAppearance = `First appearance at ${data[Math.round(num)].biography.firstAppearance}`
-    heroDataSecCard.connection = `Connection with ${data[Math.round(num)].connections.groupAffiliation}`
-    setHeroImgSecCard(<img src={data[Math.round(num)].images.lg} className= 'img' width= '160' height= '170'/>)
-    setHeroSecCard(heroDataSecCard)       
+    if (data[Math.round(num)] === undefined) {
+        changeDataSecCard()
+    } else {
+        console.log(num)
+        heroDataSecCard.name = data[Math.round(num)].name
+        heroDataSecCard.fullName = data[Math.round(num)].biography.fullName
+        heroDataSecCard.publisher = data[Math.round(num)].biography.publisher
+        heroDataSecCard.firstAppearance = `First appearance at ${data[Math.round(num)].biography.firstAppearance}`
+        heroDataSecCard.connection = `Connection with ${data[Math.round(num)].connections.groupAffiliation}`
+        setHeroImgSecCard(<img src={data[Math.round(num)].images.lg} className= 'img' width= '160' height= '170'/>)
+        setHeroSecCard(heroDataSecCard)           
+    }
 
 }
-
-
     return(
         
     <>
