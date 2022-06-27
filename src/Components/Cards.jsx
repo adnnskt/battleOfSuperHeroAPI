@@ -44,7 +44,8 @@ export default props => {
 function changeDataSecCard(){
     let heroDataSecCard = {}
     let num = Math.random() * (731 - 0) + 0
-    
+    //683
+    console.log(num)
     heroDataSecCard.name = data[Math.round(num)].name
     heroDataSecCard.fullName = data[Math.round(num)].biography.fullName
     heroDataSecCard.publisher = data[Math.round(num)].biography.publisher
