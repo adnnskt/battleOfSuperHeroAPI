@@ -2,6 +2,8 @@ import React, {useState} from 'react'
 import '../App.css'
 import api from '../Middleware/apiData'
 import data from '../Middleware/data'
+import Chart from './Chart'
+
 export default props => {
     //let hero = {}  
 
@@ -95,7 +97,7 @@ function changeDataSecCard(){
                     </div>
                 </div>
             </div>
-
+        <Chart />
         </div>
 
         </>
