@@ -164,3 +164,8 @@
 button {
   font-size: calc(10px + 2vmin);
 }
+
+.chart{
+  height: 300px;
+  width: 300px;
+}

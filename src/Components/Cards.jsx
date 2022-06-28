@@ -81,6 +81,9 @@ function changeDataSecCard(){
                             <h4 className= 'sec-text'>{hero.firstAppearance}</h4>
                             <h4 className= 'sec-text'>{hero.connection}</h4>
                         </div>
+                        <div className='chart'>
+                            <Chart />
+                        </div>>   
                     </div>
                 </div>
                 <div><button onClick={changeData} className='main-button'>Loading Heros</button></div>
@@ -96,8 +99,7 @@ function changeDataSecCard(){
                             </div>
                     </div>
                 </div>
-            </div>
-        <Chart />
+            </div>        
         </div>
 
         </>
