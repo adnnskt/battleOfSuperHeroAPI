@@ -45,7 +45,7 @@
   width: 250px;
   display: flex;
   flex-direction: column;
-  background-image: url('./src/cardBG v2.png');
+  background-image: url('./src/cardBG2 v2.png');
   background-size: 100%;
   box-shadow: 4px 4px 6px #282c34;
 }
@@ -63,25 +63,31 @@
 }
 
 .name-hero {
-  padding-left: 5%;
+  padding-left: 1%;
   padding-top: 58%;
   color: rgb(173, 6, 6);
   text-shadow: 1px 1px 3px white;
   margin: 00;
   font-family: 'Montserrat', sans-serif;
+  border-bottom: 1px solid grey;
 }
 
 .name-hero-2{
-  padding-left: 5%;
+  padding-left: 1%;
   padding-top: 58%;
   color: rgb(173, 6, 6);
   text-shadow: 1px 1px 3px white;
   margin: 00;
   font-family: 'Montserrat', sans-serif;
+  border-bottom: 1px solid grey;
+}
+
+.info{
+  padding-top: 3%;
 }
 
 .sec-text {
-  color: rgb(202, 200, 200);
+  color: rgb(44, 44, 44);
   margin: 0 0;
   padding-left: 2%; 
   font-family: 'Comic Neue', cursive;
@@ -168,4 +174,6 @@ button {
 .chart{
   height: 300px;
   width: 300px;
+  color: rgba(255, 99, 132, 1);
+  
 }
