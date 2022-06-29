@@ -83,7 +83,7 @@ function changeDataSecCard(){
                         </div>
                         <div className='chart'>
                             <Chart />
-                        </div>>   
+                        </div>
                     </div>
                 </div>
                 <div><button onClick={changeData} className='main-button'>Loading Heros</button></div>

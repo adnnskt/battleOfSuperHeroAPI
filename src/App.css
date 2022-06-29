@@ -172,8 +172,10 @@ button {
 }
 
 .chart{
-  height: 300px;
-  width: 300px;
-  color: rgba(255, 99, 132, 1);
-  
+  display: flex;
+  justify-content:center ;
+  position: absolute; 
+  height: 250px;
+  width: 250px;
+  padding-top: 20%;
 }
