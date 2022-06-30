@@ -52,6 +52,13 @@ function changeDataSecCard(){
         heroDataSecCard.publisher = data[Math.round(num)].biography.publisher
         heroDataSecCard.firstAppearance = `First appearance at ${data[Math.round(num)].biography.firstAppearance}`
         heroDataSecCard.connection = `Connection with ${data[Math.round(num)].connections.groupAffiliation}`
+        heroDataSecCard.intelligence = data[Math.round(num)].powerstats.intelligence
+        heroDataSecCard.strength = data[Math.round(num)].powerstats.strength
+        heroDataSecCard.speed = data[Math.round(num)].powerstats.speed
+        heroDataSecCard.durability = data[Math.round(num)].powerstats.durability
+        heroDataSecCard.power = data[Math.round(num)].powerstats.power
+        heroDataSecCard.combat = data[Math.round(num)].powerstats.combat
+    
         setHeroImgSecCard(<img src={data[Math.round(num)].images.lg} className= 'img' width= '160' height= '170'/>)
         setHeroSecCard(heroDataSecCard)           
     }
@@ -95,6 +102,16 @@ function changeDataSecCard(){
                                 <h4 className= 'sec-text-2'>{heroSecCard.firstAppearance}</h4>
                                 <h4 className= 'sec-text-2'>{heroSecCard.connection}</h4>
                             </div>
+                            <div className='chart'>
+                            <Chart 
+                                intelligence = {heroSecCard.intelligence}
+                                strength = {heroSecCard.strength}
+                                speed = {heroSecCard.speed}
+                                durability = {heroSecCard.durability}
+                                power = {heroSecCard.power}
+                                combat = {heroSecCard.combat} 
+                            />
+                        </div>
                     </div>
                 </div>
             </div>        
