@@ -5,8 +5,7 @@ import data from '../Middleware/data'
 import Chart from './Chart'
 
 export default props => {
-    //let hero = {}  
-
+    
  const [hero, setHero] = useState([])
  const [heroImg, setHeroImg] = useState([])
  
@@ -26,26 +25,18 @@ export default props => {
         heroData.publisher = data[Math.round(num)].biography.publisher
         heroData.firstAppearance = `First appearance at ${data[Math.round(num)].biography.firstAppearance}`
         heroData.connection = `Connection with ${data[Math.round(num)].connections.groupAffiliation}`
+        heroData.intelligence = data[Math.round(num)].powerstats.intelligence
+        heroData.strength = data[Math.round(num)].powerstats.strength
+        heroData.speed = data[Math.round(num)].powerstats.speed
+        heroData.durability = data[Math.round(num)].powerstats.durability
+        heroData.power = data[Math.round(num)].powerstats.power
+        heroData.combat = data[Math.round(num)].powerstats.combat
+        
         setHeroImg(<img src={data[Math.round(num)].images.lg} className= 'img' width= '160' height= '170'/>)
         setHero(heroData)        
     
         changeDataSecCard()    
     }
-
-     /*
-    api.get('3')
-    .then(function(response){
-        
-        heroData.name = response.data.name
-        //heroData.fullName = response.data.biography.aliases
-        //heroData.publisher = response.data.biography.publisher
-        //heroData.firstAppearance = `First appearance at ${response.data.biography['first-appearance']}`
-        //heroData.connection = `Connection with ${response.data.connections['group-affiliation']}`
-        console.log(response.data)
-       // setHeroImg(<img src={response.data.image.url} className= 'img' width= '150' height= '120'/>)
-       // setHero(heroData)        
-    })
-    */
 }
 
 function changeDataSecCard(){
@@ -82,7 +73,14 @@ function changeDataSecCard(){
                             <h4 className= 'sec-text'>{hero.connection}</h4>
                         </div>
                         <div className='chart'>
-                            <Chart />
+                            <Chart 
+                                intelligence = {hero.intelligence}
+                                strength = {hero.strength}
+                                speed = {hero.speed}
+                                durability = {hero.durability}
+                                power = {hero.power}
+                                combat = {hero.combat} 
+                            />
                         </div>
                     </div>
                 </div>
@@ -101,7 +99,8 @@ function changeDataSecCard(){
                 </div>
             </div>        
         </div>
-
+        
         </>
     )
 }
+
