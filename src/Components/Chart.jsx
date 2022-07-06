@@ -34,7 +34,7 @@ import { Radar } from 'react-chartjs-2';
           {
             //label: 'atributes',
             data: stats,
-            backgroundColor: 'rgba(239, 155, 1, 0.2)',
+            backgroundColor: 'rgba(239, 155, 1, 0.6)',
             borderColor: 'rgba(239, 155, 1, 1)',
             borderWidth: 1,
           },
