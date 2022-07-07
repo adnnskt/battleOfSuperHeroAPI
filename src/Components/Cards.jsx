@@ -70,7 +70,7 @@ function changeDataSecCard(){
     <div className='container'>
             <div className='main'>
                 <div className= 'first-container'>
-                <div className='center-img'>{heroImg}</div>
+                <div className='center-img grow'>{heroImg}</div>
                     <div className='first-card'>                                  
                         <h1 className= 'name-hero'>{hero.name}</h1>
                         <div className= 'info'>                     
