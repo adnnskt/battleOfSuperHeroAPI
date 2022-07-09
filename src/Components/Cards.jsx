@@ -12,14 +12,19 @@ export default props => {
  const [heroSecCard, setHeroSecCard] = useState([])
  const [heroImgSecCard, setHeroImgSecCard] = useState([])
  
+ const [isActive, setIsActive] = useState(false);
+ const [isActiveCard2, setIsActiveCard2] = useState(false);
+
 
  function changeData(){
     let heroData = {}
     let num = Math.random() * (731 - 0) + 0
+    //setIsActive(current => !current)
 
     if (data[Math.round(num)] === undefined){
         changeData()
     } else {
+        
         heroData.name = data[Math.round(num)].name
         heroData.fullName = data[Math.round(num)].biography.fullName
         heroData.publisher = data[Math.round(num)].biography.publisher
@@ -32,9 +37,11 @@ export default props => {
         heroData.power = data[Math.round(num)].powerstats.power
         heroData.combat = data[Math.round(num)].powerstats.combat
         
-        setHeroImg(<img src={data[Math.round(num)].images.lg} className= 'img' width= '160' height= '170'/>)
+        setIsActive(current => !current)
+        setHeroImg(<img src={data[Math.round(num)].images.lg} className= {isActive ? 'img grow' : ''} width= '160' height= '170'/>)
         setHero(heroData)        
-    
+        
+
         changeDataSecCard()    
     }
 }
@@ -58,8 +65,9 @@ function changeDataSecCard(){
         heroDataSecCard.durability = data[Math.round(num)].powerstats.durability
         heroDataSecCard.power = data[Math.round(num)].powerstats.power
         heroDataSecCard.combat = data[Math.round(num)].powerstats.combat
-    
-        setHeroImgSecCard(<img src={data[Math.round(num)].images.lg} className= 'img' width= '160' height= '170'/>)
+        
+        setIsActiveCard2(current => !current)
+        setHeroImgSecCard(<img src={data[Math.round(num)].images.lg} className= {isActiveCard2 ? 'img grow' : ''} width= '160' height= '170'/>)
         setHeroSecCard(heroDataSecCard)           
     }
 
@@ -70,7 +78,7 @@ function changeDataSecCard(){
     <div className='container'>
             <div className='main'>
                 <div className= 'first-container'>
-                <div className='center-img grow'>{heroImg}</div>
+                <div className='center-img'>{heroImg}</div>
                     <div className='first-card'>                                  
                         <h1 className= 'name-hero'>{hero.name}</h1>
                         <div className= 'info'>                     
