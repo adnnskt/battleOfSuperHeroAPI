@@ -80,8 +80,8 @@ function changeDataSecCard(){
                 <div className= 'first-container'>
                 <div className='center-img'>{heroImg}</div>
                     <div className='first-card'>                                  
-                        <h1 className= 'name-hero'>{hero.name}</h1>
-                        <div className= {isActive ? 'info fade-in' : ''}>                     
+                        <h1 className= {isActive ? 'name-hero fade-in' : 'name-hero'}>{hero.name}</h1>
+                        <div className= {isActive ? 'info fade-in' : 'info'}>                     
                             <h4 className= 'sec-text'>{hero.fullName}</h4>
                             <h4 className= 'sec-text'>{hero.publisher}</h4>
                             <h4 className= 'sec-text'>{hero.firstAppearance}</h4>
@@ -103,8 +103,8 @@ function changeDataSecCard(){
                 <div className= 'first-container'>
                     <div className='center-img'>{heroImgSecCard}</div>
                         <div className='secound-card'>
-                        <h1 className='name-hero-2'>{heroSecCard.name}</h1>
-                            <div className = {isActiveCard2 ? 'info fade-in' : ''}>                     
+                        <h1 className={isActiveCard2 ?  'name-hero-2 fade-in' : 'name-hero-2'}>{heroSecCard.name}</h1>
+                            <div className = {isActiveCard2 ? 'info fade-in' : 'info'}>                     
                                 <h4 className= 'sec-text-2'>{heroSecCard.fullName}</h4>
                                 <h4 className= 'sec-text-2'>{heroSecCard.publisher}</h4>
                                 <h4 className= 'sec-text-2'>{heroSecCard.firstAppearance}</h4>
