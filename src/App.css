@@ -65,7 +65,7 @@
 }
 
 .grow {
-  animation: grow 2s linear;
+  animation: grow 0.5s linear;
 }
 @keyframes grow {
   from { transform: scale(0); }
