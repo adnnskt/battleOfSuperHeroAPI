@@ -3,6 +3,7 @@ import '../App.css'
 import api from '../Middleware/apiData'
 import data from '../Middleware/data'
 import Chart from './Chart'
+import 'animate.css'
 
 export default props => {
     
@@ -38,7 +39,7 @@ export default props => {
         heroData.combat = data[Math.round(num)].powerstats.combat
         
         setIsActive(current => !current)
-        setHeroImg(<img src={data[Math.round(num)].images.lg} className= {isActive ? 'img grow' : ''} width= '160' height= '170'/>)
+        setHeroImg(<img src={data[Math.round(num)].images.lg} className= {isActive ? 'animate__animated animate__fadeInUp' : ''} width= '160' height= '170'/>)
         setHero(heroData)        
         
 
@@ -67,7 +68,7 @@ function changeDataSecCard(){
         heroDataSecCard.combat = data[Math.round(num)].powerstats.combat
         
         setIsActiveCard2(current => !current)
-        setHeroImgSecCard(<img src={data[Math.round(num)].images.lg} className= {isActiveCard2 ? 'img grow' : ''} width= '160' height= '170'/>)
+        setHeroImgSecCard(<img src={data[Math.round(num)].images.lg} className= {isActiveCard2 ? 'animate__animated animate__fadeInUp' : ''} width= '160' height= '170'/>)
         setHeroSecCard(heroDataSecCard)           
     }
 
