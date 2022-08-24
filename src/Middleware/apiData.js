@@ -8,7 +8,7 @@ const api = axios.create({
 export default api
 
 
-/*
+
 function getData(){
 
     let data = {}
@@ -19,4 +19,3 @@ function getData(){
     })
     return data
 }
-*/
