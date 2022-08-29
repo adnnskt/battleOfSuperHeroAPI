@@ -102,7 +102,9 @@ function changeDataSecCard(){
                 </div>
                 <div className= 'group-buttons'>
                     <button onClick={changeData} className='main-button'>Loading Heros</button>
-                    <button onClick={changeData} className='main-button'>go battle</button>
+                    <div className= 'battle-group'>
+                        <button onClick={changeData} className='battle-button'>go battle</button>
+                    </div>
                 </div>
                 <div className= 'first-container'>
                     <div className='center-img'>{heroImgSecCard}</div>
