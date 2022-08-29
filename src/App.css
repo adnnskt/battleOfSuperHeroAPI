@@ -140,6 +140,11 @@
   box-shadow: 4px 4px 6px #282c34;
 }
 
+.group-buttons{
+  display: flex;
+  flex-direction: column;
+}
+
 .main-button{
     font-size: 12px;
     border-radius: 0.5em;
