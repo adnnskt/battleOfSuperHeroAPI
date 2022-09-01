@@ -15,7 +15,7 @@ export default props => {
  
  const [isActive, setIsActive] = useState(false);
  const [isActiveCard2, setIsActiveCard2] = useState(false);
-
+ const [isHidden, setIsHidden] = useState(false);
 
  function changeData(){
     let heroData = {}
@@ -76,7 +76,7 @@ function changeDataSecCard(){
     return(
         
     <>
-    <div className='container'>
+    <div className= {isHidden ? 'hidden-element' : 'container'} >
             <div className='main'>
                 <div className= 'first-container'>
                 <div className='center-img'>{heroImg}</div>
