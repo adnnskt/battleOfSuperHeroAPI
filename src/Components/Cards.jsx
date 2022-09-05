@@ -78,8 +78,11 @@ function changeDataSecCard(){
 
 }
     return(
-        
     <>
+    <div className= {isHidden ? 'giphy' : 'hidden-element giphy'}>
+        <iframe src="https://giphy.com/embed/VeRKy8tgLDplAqWNoH" width="280" height="154" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/stickers/krima-isa-hero-superhero-superheld-VeRKy8tgLDplAqWNoH"></a></p>
+    </div>
+
     <div className= {isHidden ? 'hidden-element' : 'container'} >
             <div className='main'>
                 <div className= 'first-container'>
@@ -134,7 +137,6 @@ function changeDataSecCard(){
                 </div>
             </div>        
         </div>
-        
         </>
     )
 }

@@ -233,3 +233,8 @@ button {
 .hidden-element{
   visibility: hidden;
 }
+
+.giphy {
+   position: absolute;
+   padding-left: 20%;
+}
