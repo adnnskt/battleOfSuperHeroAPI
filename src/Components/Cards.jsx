@@ -81,6 +81,7 @@ function changeDataSecCard(){
     <>
     <div className= {isHidden ? 'giphy' : 'hidden-element giphy'}>
         <iframe src="https://giphy.com/embed/VeRKy8tgLDplAqWNoH" width="280" height="154" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/stickers/krima-isa-hero-superhero-superheld-VeRKy8tgLDplAqWNoH"></a></p>
+        <iframe src="https://giphy.com/embed/6lhye0xJFy5tD8TLY5" width="680" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/stickers/HollandBloorview-kaboom-ka-boom-hollandbloorview-6lhye0xJFy5tD8TLY5"></a></p>
     </div>
 
     <div className= {isHidden ? 'hidden-element' : 'container'} >
