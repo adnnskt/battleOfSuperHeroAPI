@@ -238,3 +238,9 @@ button {
    position: absolute;
    padding-left: 20%;
 }
+
+.giphy-center{
+  padding-top: 15%;
+  display: flex;
+  justify-content: center;
+}

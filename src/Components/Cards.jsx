@@ -80,8 +80,11 @@ function changeDataSecCard(){
     return(
     <>
     <div className= {isHidden ? 'giphy' : 'hidden-element giphy'}>
-        <iframe src="https://giphy.com/embed/VeRKy8tgLDplAqWNoH" width="280" height="154" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/stickers/krima-isa-hero-superhero-superheld-VeRKy8tgLDplAqWNoH"></a></p>
-        <iframe src="https://giphy.com/embed/6lhye0xJFy5tD8TLY5" width="680" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/stickers/HollandBloorview-kaboom-ka-boom-hollandbloorview-6lhye0xJFy5tD8TLY5"></a></p>
+        <div className='giphy-center'>
+            <iframe src="https://giphy.com/embed/VeRKy8tgLDplAqWNoH" width="330" height="214" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><a href="https://giphy.com/stickers/krima-isa-hero-superhero-superheld-VeRKy8tgLDplAqWNoH"></a>
+            <iframe src="https://giphy.com/embed/6lhye0xJFy5tD8TLY5" width="280" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><a href="https://giphy.com/stickers/HollandBloorview-kaboom-ka-boom-hollandbloorview-6lhye0xJFy5tD8TLY5"></a>
+            <iframe src="https://giphy.com/embed/2JRDs2HmH2NNXnITRe" width="280" height="200" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><a href="https://giphy.com/stickers/jerseydemic-crash-accident-car-2JRDs2HmH2NNXnITRe"></a>
+        </div>
     </div>
 
     <div className= {isHidden ? 'hidden-element' : 'container'} >
