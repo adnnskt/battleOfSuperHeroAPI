@@ -244,3 +244,10 @@ button {
   display: flex;
   justify-content: center;
 }
+
+.invert{
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
