@@ -80,8 +80,11 @@ function changeDataSecCard(){
 }
     return(
     <>
-    <div className = 'invert'>
-        <Bar />
+    <div className = 'result'>
+        <div className = 'bar-chart'>
+            <Bar />
+        </div>
+        
     </div>
 
     <div className= {isHidden ? 'hidden-element giphy' : 'hidden-element giphy'}>
