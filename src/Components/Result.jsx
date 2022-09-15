@@ -30,7 +30,7 @@ export const options = {
     responsive: true,
     plugins: {
       legend: {
-        position: 'top'/* as const*/,
+        position: 'bottom'/* as const*/,
       },
       title: {
         display: true,
@@ -54,14 +54,14 @@ export default props => {
       {
         label: 'Dataset 1',
         data: stats,
-        //borderColor: 'rgb(115, 116, 117)',
+        borderColor: 'white',
         backgroundColor: 'rgb(115, 116, 117)',
       },
       {
         label: 'Dataset 2',
         data: stats,
-        //borderColor: 'rgb(53, 162, 235)',
-        backgroundColor: 'rgb(69, 70, 71)',
+        borderColor: 'white',
+        backgroundColor: 'rgb(163, 27, 27)',
       },
     ],
   }
