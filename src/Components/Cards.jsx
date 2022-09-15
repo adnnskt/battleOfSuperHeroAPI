@@ -82,7 +82,15 @@ function changeDataSecCard(){
     <>
     <div className = 'result'>
         <div className = 'bar-chart'>
-            <Bar />
+            <Bar 
+                intelligence = {hero.intelligence}
+                strength = {hero.strength}
+                speed = {hero.speed}
+                durability = {hero.durability}
+                power = {hero.power}
+                combat = {hero.combat} 
+            
+            />
         </div>
         
     </div>
