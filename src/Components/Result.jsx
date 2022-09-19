@@ -43,9 +43,13 @@ export const options = {
 export default props => {
  
  let stats = []   
- stats = [5, 10, 2, 6, 4, 10]
+ if (props. intelligence === undefined){
+    stats = [5, 10, 2, 6, 4, 10]
+ } else {
+    [props.intelligence, props.strength, props.speed, props.durability, props.power, props.combat]
+ }
+ 
 
-  
    const labels = ['intelligence', 'strength', 'speed', 'durability', 'power', 'combat'];
   
    const data = {
