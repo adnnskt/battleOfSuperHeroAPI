@@ -89,6 +89,8 @@ function changeDataSecCard(){
                 durability = {hero.durability}
                 power = {hero.power}
                 combat = {hero.combat} 
+                name = {hero.name}
+                img = {heroimg}
             
             />
         </div>
