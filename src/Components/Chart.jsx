@@ -32,11 +32,11 @@ import { Radar } from 'react-chartjs-2';
         labels: ['intelligence', 'strength', 'speed', 'durability', 'power', 'combat'],
         datasets: [
           {
-            //label: 'atributes',
+            label: '',
             data: stats,
             backgroundColor: 'rgba(239, 155, 1, 0.6)',
             borderColor: 'rgba(239, 155, 1, 1)',
-            borderWidth: 1,
+            borderWidth: 0.5,
           },
         ],
       }

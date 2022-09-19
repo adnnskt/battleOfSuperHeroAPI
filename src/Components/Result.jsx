@@ -42,13 +42,23 @@ export const options = {
 
 export default props => {
  
- let stats = []   
+ let statsCard = []   
+ let statsSecCard = []   
+ 
+ 
  if (props. intelligence === undefined){
-    stats = [5, 10, 2, 6, 4, 10]
+    statsCard = [5, 10, 2, 6, 4, 10]
  } else {
-    [props.intelligence, props.strength, props.speed, props.durability, props.power, props.combat]
+    statsCard = [props.intelligence, props.strength, props.speed, props.durability, props.power, props.combat]
  }
  
+
+ if (props. intelligence === undefined){
+    statsSecCard = [5, 10, 2, 6, 4, 10]
+ } else {
+    statsSecCard = [props.intelligence, props.strength, props.speed, props.durability, props.power, props.combat]
+ }
+
 
    const labels = ['intelligence', 'strength', 'speed', 'durability', 'power', 'combat'];
   
@@ -57,13 +67,13 @@ export default props => {
     datasets: [
       {
         label: 'Dataset 1',
-        data: stats,
+        data: statsSecCard,
         borderColor: 'white',
         backgroundColor: 'rgb(115, 116, 117)',
       },
       {
         label: 'Dataset 2',
-        data: stats,
+        data: statsCard,
         borderColor: 'white',
         backgroundColor: 'rgb(163, 27, 27)',
       },

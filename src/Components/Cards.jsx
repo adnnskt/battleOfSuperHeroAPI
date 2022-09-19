@@ -80,7 +80,7 @@ function changeDataSecCard(){
 }
     return(
     <>
-    <div className = 'result'>
+    <div className = 'result hidden-element'>
         <div className = 'bar-chart'>
             <Bar 
                 intelligence = {hero.intelligence}
@@ -97,7 +97,7 @@ function changeDataSecCard(){
         
     </div>
 
-    <div className= {isHidden ? 'hidden-element giphy' : 'hidden-element giphy'}>
+    <div className= {isHidden ? 'giphy' : 'hidden-element giphy'}>
         <div className='giphy-center'>
             <iframe src="https://giphy.com/embed/VeRKy8tgLDplAqWNoH" width="330" height="214" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><a href="https://giphy.com/stickers/krima-isa-hero-superhero-superheld-VeRKy8tgLDplAqWNoH"></a>
             <iframe src="https://giphy.com/embed/6lhye0xJFy5tD8TLY5" width="280" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><a href="https://giphy.com/stickers/HollandBloorview-kaboom-ka-boom-hollandbloorview-6lhye0xJFy5tD8TLY5"></a>
@@ -105,7 +105,7 @@ function changeDataSecCard(){
         </div>
     </div>
 
-    <div className= {isHidden ? 'hidden-element' : 'hidden-element container'} >
+    <div className= {isHidden ? 'hidden-element' : 'container'} >
             <div className='main'>
                 <div className= 'first-container'>
                 <div className='center-img'>{heroImg}</div>
