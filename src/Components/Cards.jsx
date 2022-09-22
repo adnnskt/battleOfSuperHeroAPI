@@ -110,7 +110,7 @@ function changeDataSecCard(){
         </div>
     </div>
 
-    <div className= {isHidden ? 'fade-out hidden-element' : 'container'} >
+    <div className= {isHidden ? 'fade-out hidden-element container' : 'container'} >
             <div className='main'>
                 <div className= 'first-container'>
                 <div className= 'center-img'>{heroImg}</div>

@@ -239,7 +239,6 @@ button {
 }
 
 .hidden-element{
-  animation: fade-out 2s linear;
   visibility: hidden;
 
 }
