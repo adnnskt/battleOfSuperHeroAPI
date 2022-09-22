@@ -7,7 +7,8 @@ import Bar from './Result'
 import 'animate.css'
 
 export default props => {
-    
+
+ const [isHidden, setIsHidden] = useState(false);
  const [hero, setHero] = useState([])
  const [heroImg, setHeroImg] = useState([])
  
@@ -16,7 +17,6 @@ export default props => {
  
  const [isActive, setIsActive] = useState(false);
  const [isActiveCard2, setIsActiveCard2] = useState(false);
- const [isHidden, setIsHidden] = useState(false);
 
  function changeData(){
     let heroData = {}
@@ -40,7 +40,7 @@ export default props => {
         heroData.combat = data[Math.round(num)].powerstats.combat
         
         setIsActive(current => !current)
-        setHeroImg(<img src={data[Math.round(num)].images.lg} className= {isActive ? 'img' : 'img'} width= '160' height= '170'/>)
+        setHeroImg(<img src={data[Math.round(num)].images.lg} className= {isHidden ? 'hidden-element' : 'img animate__fadeOut'} width= '160' height= '170'/>)
         setHero(heroData)        
         
 
@@ -108,7 +108,7 @@ function changeDataSecCard(){
     <div className= {isHidden ? 'hidden-element' : 'container'} >
             <div className='main'>
                 <div className= 'first-container'>
-                <div className='center-img'>{heroImg}</div>
+                <div className={isHidden ? 'hidden-element' : 'center-img animate__fadeOut'}>{heroImg}</div>
                     <div className='first-card'>                                  
                         <h1 className= {isActive ? 'name-hero fade-in' : 'name-hero'}>{hero.name}</h1>
                         <div className= {isActive ? 'info fade-in' : 'info'}>                     
