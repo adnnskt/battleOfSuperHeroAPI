@@ -9,6 +9,8 @@ import 'animate.css'
 export default props => {
 
  const [isHidden, setIsHidden] = useState(false);
+ const [isHiddenBattle, setIsHiddenBattle] = useState(false);
+ 
  const [hero, setHero] = useState([])
  const [heroImg, setHeroImg] = useState([])
  
@@ -50,6 +52,9 @@ export default props => {
 
 function hidden(){
     setIsHidden(current => !current)
+    setTimeout(() => {
+        setIsHiddenBattle(current => !current);
+      }, "1000")
 }
  
 function changeDataSecCard(){
@@ -97,7 +102,7 @@ function changeDataSecCard(){
         
     </div>
 
-    <div className= {isHidden ? 'giphy' : 'hidden-element giphy'}>
+    <div className= {isHiddenBattle ? 'giphy' : 'hidden-element giphy'}>
         <div className='giphy-center'>
             <iframe src="https://giphy.com/embed/VeRKy8tgLDplAqWNoH" width="330" height="214" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><a href="https://giphy.com/stickers/krima-isa-hero-superhero-superheld-VeRKy8tgLDplAqWNoH"></a>
             <iframe src="https://giphy.com/embed/6lhye0xJFy5tD8TLY5" width="280" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><a href="https://giphy.com/stickers/HollandBloorview-kaboom-ka-boom-hollandbloorview-6lhye0xJFy5tD8TLY5"></a>
@@ -105,10 +110,10 @@ function changeDataSecCard(){
         </div>
     </div>
 
-    <div className= {isHidden ? 'hidden-element' : 'container'} >
+    <div className= {isHidden ? 'fade-out hidden-element' : 'container'} >
             <div className='main'>
                 <div className= 'first-container'>
-                <div className={isHidden ? 'hidden-element' : 'center-img animate__fadeOut'}>{heroImg}</div>
+                <div className= 'center-img'>{heroImg}</div>
                     <div className='first-card'>                                  
                         <h1 className= {isActive ? 'name-hero fade-in' : 'name-hero'}>{hero.name}</h1>
                         <div className= {isActive ? 'info fade-in' : 'info'}>                     

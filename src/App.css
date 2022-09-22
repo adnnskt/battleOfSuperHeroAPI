@@ -81,6 +81,14 @@
 }
 
 
+.fade-out {
+  animation: fade-out 2s linear;
+}
+@keyframes fade-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
 
 /*
 @keyframes grow {
@@ -231,7 +239,9 @@ button {
 }
 
 .hidden-element{
+  animation: fade-out 2s linear;
   visibility: hidden;
+
 }
 
 .giphy {
