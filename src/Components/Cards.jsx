@@ -10,7 +10,9 @@ export default props => {
 
  const [isHidden, setIsHidden] = useState(false);
  const [isHiddenBattle, setIsHiddenBattle] = useState(false);
+ const [isHiddenResult, setIsHiddenResult] = useState(false);
  
+
  const [hero, setHero] = useState([])
  const [heroImg, setHeroImg] = useState([])
  
