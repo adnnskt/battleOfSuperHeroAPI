@@ -53,10 +53,15 @@ export default props => {
 }
 
 function hidden(){
-    setIsHidden(current => !current)
-    setTimeout(() => {
-        setIsHiddenBattle(current => !current);
-      }, "1000")
+    if(hero.name != undefined && hero.name != null){
+        setIsHidden(current => !current)
+        setTimeout(() => {
+            setIsHiddenBattle(current => !current);
+          }, "1000")
+    } else {
+        alert("Please push the button loading heros");
+    }
+
 }
  
 function changeDataSecCard(){
