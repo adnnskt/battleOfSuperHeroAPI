@@ -47,16 +47,16 @@ export default props => {
  
  
  if (props. intelligence === undefined){
-    statsCard = [5, 10, 2, 6, 4, 10]
+    statsCard = [10, 10, 10, 10, 10, 10]
  } else {
     statsCard = [props.intelligence, props.strength, props.speed, props.durability, props.power, props.combat]
  }
  
 
  if (props. intelligence === undefined){
-    statsSecCard = [5, 10, 2, 6, 4, 10]
+    statsSecCard = [10, 10, 10, 10, 10, 10]
  } else {
-    statsSecCard = [props.intelligence, props.strength, props.speed, props.durability, props.power, props.combat]
+    statsSecCard = [props.intelligenceSecCard, props.strengthSecCard, props.speedSecCard, props.durabilitySecCard, props.powerSecCard, props.combatSecCard]
  }
 
 
@@ -66,13 +66,13 @@ export default props => {
     labels,
     datasets: [
       {
-        label: 'Dataset 1',
+        label: props.name,
         data: statsSecCard,
         borderColor: 'white',
         backgroundColor: 'rgb(115, 116, 117)',
       },
       {
-        label: 'Dataset 2',
+        label: props.nameSecCard,
         data: statsCard,
         borderColor: 'white',
         backgroundColor: 'rgb(163, 27, 27)',

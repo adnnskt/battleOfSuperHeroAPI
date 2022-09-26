@@ -113,7 +113,15 @@ function changeDataSecCard(){
                 combat = {hero.combat} 
                 name = {hero.name}
                 img = {heroImg}
-            
+
+                intelligenceSecCard = {heroSecCard.intelligence}
+                strengthSecCard = {heroSecCard.strength}
+                speedSecCard = {heroSecCard.speed}
+                durabilitySecCard = {heroSecCard.durability}
+                powerSecCard = {heroSecCard.power}
+                combatSecCard = {heroSecCard.combat} 
+                nameSecCard = {heroSecCard.name}
+                imgSecCard = {heroImgSecCard}
             />
         </div>
         
