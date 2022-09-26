@@ -58,9 +58,19 @@ function hidden(){
         setTimeout(() => {
             setIsHiddenBattle(current => !current);
           }, "1000")
+
+        setTimeout(() => {
+        setIsHiddenBattle(current => !current);
+        }, "3000") 
+
+        setTimeout(() => {
+            setIsHiddenResult(current => !current);
+            }, "3100") 
+            
     } else {
-        alert("Please push the button loading heros");
+        alert("Please push the button loading heros first");
     }
+
 
 }
  
@@ -92,7 +102,7 @@ function changeDataSecCard(){
 }
     return(
     <>
-    <div className = 'result hidden-element'>
+    <div className = {isHiddenResult ? 'result' : 'result hidden-element'}>
         <div className = 'bar-chart'>
             <Bar 
                 intelligence = {hero.intelligence}
