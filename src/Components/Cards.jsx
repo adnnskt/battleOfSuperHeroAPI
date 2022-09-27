@@ -102,29 +102,33 @@ function changeDataSecCard(){
 }
     return(
     <>
-    <div className = {isHiddenResult ? 'result' : 'result hidden-element'}>
-        <div className = 'bar-chart'>
-            <Bar 
-                intelligence = {hero.intelligence}
-                strength = {hero.strength}
-                speed = {hero.speed}
-                durability = {hero.durability}
-                power = {hero.power}
-                combat = {hero.combat} 
-                name = {hero.name}
-                img = {heroImg}
 
-                intelligenceSecCard = {heroSecCard.intelligence}
-                strengthSecCard = {heroSecCard.strength}
-                speedSecCard = {heroSecCard.speed}
-                durabilitySecCard = {heroSecCard.durability}
-                powerSecCard = {heroSecCard.power}
-                combatSecCard = {heroSecCard.combat} 
-                nameSecCard = {heroSecCard.name}
-                imgSecCard = {heroImgSecCard}
-            />
+    <div className = {isHiddenResult ? 'result' : 'result hidden-element'}>
+        <div className= 'result-box'>
+            <div>{heroImg}</div>
+            <div className = 'bar-chart'>
+                <Bar 
+                    intelligence = {hero.intelligence}
+                    strength = {hero.strength}
+                    speed = {hero.speed}
+                    durability = {hero.durability}
+                    power = {hero.power}
+                    combat = {hero.combat} 
+                    name = {hero.name}
+                    img = {heroImg}
+
+                    intelligenceSecCard = {heroSecCard.intelligence}
+                    strengthSecCard = {heroSecCard.strength}
+                    speedSecCard = {heroSecCard.speed}
+                    durabilitySecCard = {heroSecCard.durability}
+                    powerSecCard = {heroSecCard.power}
+                    combatSecCard = {heroSecCard.combat} 
+                    nameSecCard = {heroSecCard.name}
+                    imgSecCard = {heroImgSecCard}
+                />
+            </div>
+            <div>{heroImgSecCard}</div>
         </div>
-        
     </div>
 
     <div className= {isHiddenBattle ? 'giphy' : 'hidden-element giphy'}>
