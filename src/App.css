@@ -294,6 +294,10 @@ button {
   height: 70%;
 }
 
+.carousel{
+  width: 10%;
+}
+
 .teste-cor{
   color: rgb(47, 47, 48);
   color: rgb(163, 27, 27);

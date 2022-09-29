@@ -5,6 +5,7 @@ import data from '../Middleware/data'
 import Chart from './Chart'
 import Bar from './Result'
 import 'animate.css'
+import Carousel from './Carousel'
 
 export default props => {
 
@@ -106,6 +107,9 @@ function changeDataSecCard(){
     <div className = {isHiddenResult ? 'result' : 'result hidden-element'}>
         <div className= 'result-box'>
             <div>{heroImg}</div>
+            <div>
+                <Carousel />
+            </div>
             <div className = 'bar-chart'>
                 <Bar 
                     intelligence = {hero.intelligence}
