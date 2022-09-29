@@ -101,11 +101,8 @@ function changeDataSecCard(){
     }
 
 }
-    return(
-    <>
-
-    <div className = {isHiddenResult ? 'result' : 'result hidden-element'}>
-        <div className= 'result-box'>
+    /*
+           <div className= 'result-box'>
             <div>{heroImg}</div>
             <div>
                 <Carousel />
@@ -133,6 +130,14 @@ function changeDataSecCard(){
             </div>
             <div>{heroImgSecCard}</div>
         </div>
+    */
+
+
+    return(
+    <>
+    
+    <div className = {isHiddenResult ? 'result' : 'result hidden-element'}>
+        <Carousel />
     </div>
 
     <div className= {isHiddenBattle ? 'giphy' : 'hidden-element giphy'}>
