@@ -12,7 +12,6 @@ export default props => {
  const [isHidden, setIsHidden] = useState(false);
  const [isHiddenBattle, setIsHiddenBattle] = useState(false);
  const [isHiddenResult, setIsHiddenResult] = useState(false);
- 
 
  const [hero, setHero] = useState([])
  const [heroImg, setHeroImg] = useState([])
@@ -22,6 +21,29 @@ export default props => {
  
  const [isActive, setIsActive] = useState(false);
  const [isActiveCard2, setIsActiveCard2] = useState(false);
+
+ const [result, setResult] = useState(
+    <Bar 
+        intelligence = {hero.intelligence}
+        strength = {hero.strength}
+        speed = {hero.speed}
+        durability = {hero.durability}
+        power = {hero.power}
+        combat = {hero.combat} 
+        name = {hero.name}
+        img = {heroImg}
+
+        intelligenceSecCard = {heroSecCard.intelligence}
+        strengthSecCard = {heroSecCard.strength}
+        speedSecCard = {heroSecCard.speed}
+        durabilitySecCard = {heroSecCard.durability}
+        powerSecCard = {heroSecCard.power}
+        combatSecCard = {heroSecCard.combat} 
+        nameSecCard = {heroSecCard.name}
+        imgSecCard = {heroImgSecCard}
+    />
+)
+
 
  function changeData(){
     let heroData = {}
@@ -102,34 +124,6 @@ function changeDataSecCard(){
 
 }
     /*
-           <div className= 'result-box'>
-            <div>{heroImg}</div>
-            <div>
-                <Carousel />
-            </div>
-            <div className = 'bar-chart'>
-                <Bar 
-                    intelligence = {hero.intelligence}
-                    strength = {hero.strength}
-                    speed = {hero.speed}
-                    durability = {hero.durability}
-                    power = {hero.power}
-                    combat = {hero.combat} 
-                    name = {hero.name}
-                    img = {heroImg}
-
-                    intelligenceSecCard = {heroSecCard.intelligence}
-                    strengthSecCard = {heroSecCard.strength}
-                    speedSecCard = {heroSecCard.speed}
-                    durabilitySecCard = {heroSecCard.durability}
-                    powerSecCard = {heroSecCard.power}
-                    combatSecCard = {heroSecCard.combat} 
-                    nameSecCard = {heroSecCard.name}
-                    imgSecCard = {heroImgSecCard}
-                />
-            </div>
-            <div>{heroImgSecCard}</div>
-        </div>
     */
 
 
@@ -137,7 +131,16 @@ function changeDataSecCard(){
     <>
     
     <div className = {isHiddenResult ? 'result' : 'result hidden-element'}>
-        <Carousel />
+        
+    <div className= 'result-box'>
+            <div>{heroImg}</div>
+            <div><button> > </button></div>
+            <div className = 'bar-chart'>
+                {result}
+            </div>
+            <div><button>></button></div>
+            <div>{heroImgSecCard}</div>
+        </div>
     </div>
 
     <div className= {isHiddenBattle ? 'giphy' : 'hidden-element giphy'}>
