@@ -134,7 +134,7 @@ function changeResultBar(){
 
 function changeResult(){
     
-    setResult(<p>Teste</p>)
+    setResult(<p>Teste new data</p>)
  }
 
 
