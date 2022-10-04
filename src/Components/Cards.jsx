@@ -5,7 +5,7 @@ import data from '../Middleware/data'
 import Chart from './Chart'
 import Bar from './Result'
 import 'animate.css'
-import Carousel from './Carousel'
+import PieChart from './PieChart'
 
 export default props => {
 
@@ -129,12 +129,11 @@ function changeResultBar(){
             imgSecCard = {heroImgSecCard}
         />
     )     
-    console.log(hero.name)
 }
 
 function changeResult(){
     
-    setResult(<p>Teste new data</p>)
+    setResult(<PieChart />)
  }
 
 
