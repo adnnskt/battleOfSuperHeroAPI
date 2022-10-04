@@ -22,31 +22,14 @@ export default props => {
  const [isActive, setIsActive] = useState(false);
  const [isActiveCard2, setIsActiveCard2] = useState(false);
 
- const [result, setResult] = useState(
-    <Bar 
-        intelligence = {hero.intelligence}
-        strength = {hero.strength}
-        speed = {hero.speed}
-        durability = {hero.durability}
-        power = {hero.power}
-        combat = {hero.combat} 
-        name = {hero.name}
-        img = {heroImg}
+ const [result, setResult] = useState(false)
 
-        intelligenceSecCard = {heroSecCard.intelligence}
-        strengthSecCard = {heroSecCard.strength}
-        speedSecCard = {heroSecCard.speed}
-        durabilitySecCard = {heroSecCard.durability}
-        powerSecCard = {heroSecCard.power}
-        combatSecCard = {heroSecCard.combat} 
-        nameSecCard = {heroSecCard.name}
-        imgSecCard = {heroImgSecCard}
-    />
-)
 
+ let heroData = {}
+ let heroDataSecCard = {}
 
  function changeData(){
-    let heroData = {}
+    //let heroData = {}
     let num = Math.random() * (731 - 0) + 0
     //setIsActive(current => !current)
 
@@ -98,13 +81,12 @@ function hidden(){
 }
  
 function changeDataSecCard(){
-    let heroDataSecCard = {}
+    //let heroDataSecCard = {}
     let num = Math.random() * (731 - 0) + 0
     //683
     if (data[Math.round(num)] === undefined) {
         changeDataSecCard()
     } else {
-        console.log(num)
         heroDataSecCard.name = data[Math.round(num)].name
         heroDataSecCard.fullName = data[Math.round(num)].biography.fullName
         heroDataSecCard.publisher = data[Math.round(num)].biography.publisher
@@ -119,10 +101,43 @@ function changeDataSecCard(){
         
         setIsActiveCard2(current => !current)
         setHeroImgSecCard(<img src={data[Math.round(num)].images.lg} className= {isActiveCard2 ? 'img' : 'img'} width= '160' height= '170'/>)
-        setHeroSecCard(heroDataSecCard)           
+        setHeroSecCard(heroDataSecCard)
+        changeResultBar()                      
     }
 
 }
+
+function changeResultBar(){
+    setResult(
+        <Bar 
+            intelligence = {heroData.intelligence}
+            strength = {heroData.strength}
+            speed = {heroData.speed}
+            durability = {heroData.durability}
+            power = {heroData.power}
+            combat = {heroData.combat} 
+            name = {heroData.name}
+            img = {heroImg}
+
+            intelligenceSecCard = {heroDataSecCard.intelligence}
+            strengthSecCard = {heroDataSecCard.strength}
+            speedSecCard = {heroDataSecCard.speed}
+            durabilitySecCard = {heroDataSecCard.durability}
+            powerSecCard = {heroDataSecCard.power}
+            combatSecCard = {heroDataSecCard.combat} 
+            nameSecCard = {heroDataSecCard.name}
+            imgSecCard = {heroImgSecCard}
+        />
+    )     
+    console.log(hero.name)
+}
+
+function changeResult(){
+    
+    setResult(<p>Teste</p>)
+ }
+
+
     /*
     */
 
@@ -138,16 +153,16 @@ function changeDataSecCard(){
             <div className = 'bar-chart'>
                 {result}
             </div>
-            <div><button>></button></div>
+            <div><button onClick={changeResult}>></button></div>
             <div>{heroImgSecCard}</div>
         </div>
     </div>
 
     <div className= {isHiddenBattle ? 'giphy' : 'hidden-element giphy'}>
         <div className='giphy-center'>
-            <iframe src="https://giphy.com/embed/VeRKy8tgLDplAqWNoH" width="330" height="214" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><a href="https://giphy.com/stickers/krima-isa-hero-superhero-superheld-VeRKy8tgLDplAqWNoH"></a>
-            <iframe src="https://giphy.com/embed/6lhye0xJFy5tD8TLY5" width="280" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><a href="https://giphy.com/stickers/HollandBloorview-kaboom-ka-boom-hollandbloorview-6lhye0xJFy5tD8TLY5"></a>
-            <iframe src="https://giphy.com/embed/2JRDs2HmH2NNXnITRe" width="280" height="200" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><a href="https://giphy.com/stickers/jerseydemic-crash-accident-car-2JRDs2HmH2NNXnITRe"></a>
+            <iframe src="https://giphy.com/embed/VeRKy8tgLDplAqWNoH" width="330" height="214" frameBorder="0" className="giphy-embed" allowFullScreen></iframe><a href="https://giphy.com/stickers/krima-isa-hero-superhero-superheld-VeRKy8tgLDplAqWNoH"></a>
+            <iframe src="https://giphy.com/embed/6lhye0xJFy5tD8TLY5" width="280" height="480" frameBorder="0" className="giphy-embed" allowFullScreen></iframe><a href="https://giphy.com/stickers/HollandBloorview-kaboom-ka-boom-hollandbloorview-6lhye0xJFy5tD8TLY5"></a>
+            <iframe src="https://giphy.com/embed/2JRDs2HmH2NNXnITRe" width="280" height="200" frameBorder="0" className="giphy-embed" allowFullScreen></iframe><a href="https://giphy.com/stickers/jerseydemic-crash-accident-car-2JRDs2HmH2NNXnITRe"></a>
         </div>
     </div>
 
