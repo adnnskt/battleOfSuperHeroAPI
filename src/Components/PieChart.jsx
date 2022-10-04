@@ -1,6 +1,8 @@
 import React from 'react';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Pie } from 'react-chartjs-2';
+import '../App.css'
+
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -23,9 +25,13 @@ export default props => {
         borderWidth: 1,
         },
     ],
+
  }
   return (
-  <Pie data={data} />
+    <div className = 'pie-chart'>
+        <Pie data={data} />
+    </div>
+    
   )
 }
 

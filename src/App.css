@@ -303,3 +303,8 @@ button {
   color: rgb(163, 27, 27);
 }
 
+.pie-chart{
+  height: 350px;
+  width: 350px;
+}
+
