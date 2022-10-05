@@ -19,6 +19,16 @@ import { Radar } from 'react-chartjs-2';
     //Legend
   );
   
+  export const options = {
+    responsive: true,
+    plugins: {
+      legend: {
+        display: false,
+      },
+    },
+  }  
+
+
   export default props => {
     let stats = []
 
@@ -42,7 +52,7 @@ import { Radar } from 'react-chartjs-2';
       }
       
     return(
-        <Radar data={data} />
+        <Radar options={options} data={data} />
     )   
   } 
 /*
