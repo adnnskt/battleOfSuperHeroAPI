@@ -12,15 +12,15 @@ export default props => {
     datasets: [
         {
         label: '# of Votes',
-        data: [12, 19, 3, 5, 2, 3],
+        data: [12, 19],
         backgroundColor: [
-            'rgba(255, 99, 132, 0.2)',
-            'rgba(54, 162, 235, 0.2)',
+            'rgb(115, 116, 117)',
+            'rgb(163, 27, 27)',
 
         ],
         borderColor: [
-            'rgba(255, 99, 132, 1)',
-            'rgba(54, 162, 235, 1)',
+            'rgb(115, 116, 117)',
+            'rgb(163, 27, 27)',
         ],
         borderWidth: 1,
         },
