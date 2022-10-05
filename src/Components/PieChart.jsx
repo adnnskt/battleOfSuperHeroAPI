@@ -3,15 +3,28 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Pie } from 'react-chartjs-2';
 import '../App.css'
 
-
 ChartJS.register(ArcElement, Tooltip, Legend);
+
+export const options = {
+    responsive: true,
+    plugins: {
+      legend: {
+        position: 'bottom'/* as const*/,
+      },
+      title: {
+        display: true,
+        /*text: 'Chart.js Horizontal Bar Chart',*/
+      },
+    },
+  }
+
 
 export default props => {
   const data = {  
     labels: ['Red', 'Blue'],
     datasets: [
         {
-        label: '# of Votes',
+        //label: '# of Votes',
         data: [12, 19],
         backgroundColor: [
             'rgb(115, 116, 117)',
@@ -25,11 +38,16 @@ export default props => {
         borderWidth: 1,
         },
     ],
+    options:{
+        legend:{
+            position: 'bottom',
+        }
+    },
 
  }
   return (
     <div className = 'pie-chart'>
-        <Pie data={data} />
+        <Pie options={options} data={data} />
     </div>
     
   )
