@@ -52,7 +52,7 @@ import { Radar } from 'react-chartjs-2';
       }
       
     return(
-        <Radar options={options} data={data} />
+        <Radar options={options}  data={data} />
     )   
   } 
 /*
