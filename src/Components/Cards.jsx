@@ -147,13 +147,17 @@ function changeResult(){
     <div className = {isHiddenResult ? 'result' : 'result hidden-element'}>
         
     <div className= 'result-box'>
-            <div>{heroImg}</div>
+            <div className= 'result-name'>
+                <div>{heroImg}</div>
+                    <h1 className= 'name-heroResult'>{hero.name}</h1>
+            </div>
             <div><button> > </button></div>
             <div className = 'bar-chart'>
                 {result}
             </div>
             <div><button onClick={changeResult}>></button></div>
             <div>{heroImgSecCard}</div>
+                <h1 className= 'name-heroResult'>{heroSecCard.name}</h1>
         </div>
     </div>
 
