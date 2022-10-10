@@ -156,8 +156,10 @@ function changeResult(){
                 {result}
             </div>
             <div><button onClick={changeResult}>></button></div>
-            <div>{heroImgSecCard}</div>
-                <h1 className= 'name-heroResult'>{heroSecCard.name}</h1>
+            <div className= 'result-name'>
+                <div>{heroImgSecCard}</div>
+                    <h1 className= 'name-heroResult'>{heroSecCard.name}</h1>
+            </div>
         </div>
     </div>
 
