@@ -34,7 +34,8 @@ export const options = {
       },
       title: {
         display: true,
-        /*text: 'Chart.js Horizontal Bar Chart',*/
+        text: 'Power Stats',
+        position: 'top',
       },
     },
   }
