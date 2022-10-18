@@ -320,6 +320,18 @@ button {
   align-items: center;
 }
 
-.carousel-button {
-  background-image: url('./img/right.png');
+.r-button {
+  background-image: url('../img/right.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 60px;
+  height: 60px;
+}
+
+.l-button {
+  background-image: url('../img/left.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 60px;
+  height: 60px;
 }

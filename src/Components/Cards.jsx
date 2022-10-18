@@ -151,11 +151,11 @@ function changeResult(){
                 <div>{heroImg}</div>
                     <h1 className= 'name-heroResult'>{hero.name}</h1>
             </div>
-            <div><button> > </button></div>
+            <div className='l-button'></div>
             <div className = 'bar-chart'>
                 {result}
             </div>
-            <div><button onClick={changeResult} className='carousel-button'></button></div>
+            <div className='r-button' onClick={changeResult}></div>
             <div className= 'result-name'>
                 <div>{heroImgSecCard}</div>
                     <h1 className= 'name-heroResult'>{heroSecCard.name}</h1>
