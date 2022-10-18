@@ -16,6 +16,11 @@ export const options = {
         text: 'Best Power',
         position: 'top',
       },
+      subtitle: {
+        display: true,
+        text: 'The best power stats of heros',
+        position: 'bottom',
+      },
     },
   }
 
