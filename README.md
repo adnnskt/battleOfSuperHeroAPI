@@ -9,3 +9,7 @@ Land page style:
 Card style:
 
 ![alt text](https://github.com/adnnskt/battleOfSuperHeroAPI/blob/main/img/bosapiCard.PNG?raw=true)
+
+Result of heros stats:
+
+![alt text](https://github.com/adnnskt/battleOfSuperHeroAPI/blob/main/img/bosapiResult.PNG?raw=true)
