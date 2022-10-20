@@ -131,8 +131,26 @@ function changeResultBar(){
     )     
 }
 
-function changeResult(){
-    
+function changeResult(){    
+    let power = [
+        {
+            intelligence: hero.intelligence, 
+            strength: hero.strength,
+            speed: hero.speed,
+            durability: hero.durability,
+            power: hero.power,
+            combat: hero.combat
+
+        }
+    ]
+
+    let powerSort = power.sort((a, b) =>{
+        return a - b
+    })
+
+    console.log(powerSort)
+    console.log(power)
+
     setResult(<PieChart />)
  }
 
