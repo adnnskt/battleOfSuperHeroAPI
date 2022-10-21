@@ -132,24 +132,65 @@ function changeResultBar(){
 }
 
 function changeResult(){    
-    let power = [
+    let powerStats = [
         {
-            intelligence: hero.intelligence, 
-            strength: hero.strength,
-            speed: hero.speed,
-            durability: hero.durability,
-            power: hero.power,
-            combat: hero.combat
-
+            type: 'intelligence',
+            value:  hero.intelligence
+        },
+        {
+            type: 'strength',
+            value:  hero.strength
+        },
+        {
+            type: 'speed',
+            value: hero.speed
+        },
+        {
+            type: 'durability',
+            value: hero.durability
+        },
+        {
+            type: 'power',
+            value: hero.power
+        },
+        {
+            type: 'combat',
+            value: hero.combat
         }
     ]
 
-    let powerSort = power.sort((a, b) =>{
-        return a - b
-    })
-
-    console.log(powerSort)
-    console.log(power)
+    let powerStatsSecCard = [
+        {
+            type: 'intelligence',
+            value:  heroSecCard.intelligence
+        },
+        {
+            type: 'strength',
+            value:  heroSecCard.strength
+        },
+        {
+            type: 'speed',
+            value: heroSecCard.speed
+        },
+        {
+            type: 'durability',
+            value: heroSecCard.durability
+        },
+        {
+            type: 'power',
+            value: heroSecCard.power
+        },
+        {
+            type: 'combat',
+            value: heroSecCard.combat
+        }
+    ] 
+    powerStats.sort(function(a, b){return b.value-a.value})
+    powerStatsSecCard.sort(function(a, b){return b.value-a.value})
+    
+    
+    
+    
 
     setResult(<PieChart />)
  }
