@@ -76,8 +76,6 @@ function hidden(){
     } else {
         alert("Please push the button loading heros first");
     }
-
-
 }
  
 function changeDataSecCard(){
@@ -188,11 +186,14 @@ function changeResult(){
     powerStats.sort(function(a, b){return b.value-a.value})
     powerStatsSecCard.sort(function(a, b){return b.value-a.value})
     
-    
-    
-    
+    setResult(<PieChart 
 
-    setResult(<PieChart />)
+        name = {hero.name}
+        nameSecCard = {heroSecCard.name}
+        power = {powerStats[0]}
+        powerSecCard = {powerStatsSecCard[0]}
+        
+    />)
  }
 
 

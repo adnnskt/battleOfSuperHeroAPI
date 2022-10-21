@@ -27,19 +27,19 @@ export const options = {
 
 export default props => {
   const data = {  
-    labels: ['Red', 'Blue'],
+    labels: [props.nameSecCard, props.name],
     datasets: [
         {
         //label: '# of Votes',
-        data: [12, 19],
+        data: [props.power, props.powerSecCard],
         backgroundColor: [
-            'rgb(115, 116, 117)',
             'rgb(163, 27, 27)',
+            'rgb(115, 116, 117)',
 
         ],
         borderColor: [
-            'rgb(115, 116, 117)',
             'rgb(163, 27, 27)',
+            'rgb(115, 116, 117)',
         ],
         borderWidth: 1,
         },
