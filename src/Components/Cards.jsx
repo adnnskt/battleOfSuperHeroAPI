@@ -190,8 +190,11 @@ function changeResult(){
 
         name = {hero.name}
         nameSecCard = {heroSecCard.name}
-        power = {powerStats[0]}
-        powerSecCard = {powerStatsSecCard[0]}
+        power = {powerStats[0].value}
+        powerSecCard = {powerStatsSecCard[0].value}
+        powerType = {powerStats[0].type}
+        powerTypeSecCard = {powerStatsSecCard[0].type}
+        
         
     />)
  }

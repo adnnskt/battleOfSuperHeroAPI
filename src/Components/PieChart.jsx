@@ -13,7 +13,7 @@ export const options = {
       },
       title: {
         display: true,
-        text: 'Best Power',
+        text: 'Best Power stats',
         position: 'top',
       },
       subtitle: {
@@ -27,7 +27,7 @@ export const options = {
 
 export default props => {
   const data = {  
-    labels: [`${props.nameSecCard} #${props.powerSecCard}`, `${props.name} #${props.power}`],
+    labels: [`${props.nameSecCard} -${props.powerTypeSecCard}`, `${props.name} -${props.powerType}`],
     datasets: [
         {
         //label: '# of Votes',
