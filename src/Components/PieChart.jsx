@@ -27,7 +27,7 @@ export const options = {
 
 export default props => {
   const data = {  
-    labels: [props.nameSecCard, props.name],
+    labels: [`${props.nameSecCard} #${props.powerSecCard}`, `${props.name} #${props.power}`],
     datasets: [
         {
         //label: '# of Votes',
